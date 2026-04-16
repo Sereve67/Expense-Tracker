@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Finance Tracker</title>
+    <link href="/static/styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-chart-pie"></i>
+                <span>Finance Tracker</span>
+            </div>
+            <nav>
+                <a href="#dashboard" class="active">Dashboard</a>
+                <a href="#transactions">Transactions</a>
+                <a href="#accounts">Accounts</a>
+                <a href="#categories">Categories</a>
+                <a href="#vendors">Vendors</a>
+                <a href="#add-transaction">Add Transaction</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutButton">Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="flex justify-between items-center p-4">
+                <div class="flex items-center">
+                    <button id="menuToggle" class="menu-toggle md:hidden mr-4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 id="pageTitle" class="text-xl font-bold">Dashboard</h1>
+                </div>
+                <div class="user-dropdown">
+                    <span id="userName" class="mr-2">Loading...</span>
+                    <div class="user-initials" id="userInitials">U</div>
+                    <div class="dropdown-content">
+                        <a href="#profile">Profile Settings</a>
+                        <a href="" id="dropdownLogout">Logout</a>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div id="content">
+                    <!-- Content will be loaded here dynamically -->
+                    <div class="loader"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/vendor.js"></script>
+</body>
+</html>
